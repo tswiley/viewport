@@ -1,0 +1,382 @@
+/* YOUR NAME GOES HERE */
+Travis Wiley
+/* --------------- ADD CSS RESET TO THE FILE HERE --------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ----- AUTOPREFIXER FOR VS CODE WAS USED FOR VENDOR PREFIXES ----- */
+/* ---------- VARIABLES ---------- */
+:root{
+    --red: #760029;
+    --pink: #9a0093;
+    --orange: #ff8f6c;
+    --yellow: #FCD30D;
+    --green: #0BD996;
+    --lime-green: #AED90B;
+    --blue-gray: #90b8f7;
+    --blue: #1EB8FC;
+    --black: #000;
+    --white: #fff;
+    --light-gray: #eaeaea;
+    --dark-gray: #222;
+}
+
+/* ---------- GLOBAL STYLES ---------- */
+*{
+    box-sizing: border-box;
+    line-height: 1.35;
+}
+
+
+
+/* ----- CHECK FOR USER DARK MODE PREFERENCE ----- */
+/* --------------- BEGIN USER PREFERS DARK COLOR SCHEME QUERY --------------- */
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: darkgray;
+    }
+  }
+/* CHANGE THE BODY'S BACKGROUND COLOR TO THE DARK GRAY IF THE USER PREFERS DARK MODE */
+
+/* --------------- END USER PREFERS DARK COLOR SCHEME QUERY --------------- */
+
+
+
+/* ----- HEADINGS ----- */
+h1, h2, h3, h4{
+    font-weight: bold;
+}
+
+h1{
+    font-size: 2em;
+    margin: 0.5em 0;
+    display: inline;
+}
+
+h2{
+    font-size: 1.75em;
+    display: inline;
+}
+
+/* ----- IMAGES ----- */
+img{
+    display: block;
+    max-width: 100%;
+    margin: 0.5em 0;
+}
+
+/* ----- ANIMATED ICON ----- */
+/* Icon and animation code from https://typogram.github.io/Anicons/ */
+.icon{
+    font-family: "Anicons Regular";
+    font-size: 2em;
+    display: inline-block;
+    margin: 0 0.5em;
+    -webkit-animation: icon-animation 1s ease-in-out infinite;
+            animation: icon-animation 1s ease-in-out infinite;
+    overflow: visible;
+}
+
+footer .icon{
+    font-size: 1em;
+}
+
+@-webkit-keyframes icon-animation {
+    0% { font-variation-settings: "TIME" 1; }
+  100% { font-variation-settings: "TIME" 100; }
+}
+
+@keyframes icon-animation {
+    0% { font-variation-settings: "TIME" 1; }
+  100% { font-variation-settings: "TIME" 100; }
+}
+
+
+
+/* ----- HANDLE PREFERS REDUCED MOTION FOR THE ICON ANIMATIONS ----- */
+/* --------------- BEGIN USER PREFERS REDUCED MOTION QUERY --------------- */
+    @-webkit-keyframes icon-animation {
+        0% { font-variation-settings: "TIME" 1; }
+    }
+    @keyframes icon-animation {
+        0% { font-variation-settings: "TIME" 1; }
+    }
+/* --------------- END USER PREFERS REDUCED MOTION QUERY --------------- */
+
+
+
+/* ----- TEXT ----- */
+p, small{
+    font-size: 1em;
+    margin: 0.25em;
+    padding: 0.25em;
+    max-width: 75ch;
+}
+
+/* ----- MAIN/HEADER/FOOTER ----- */
+main, header, footer{
+    font-family: sans-serif;
+    color: var(--dark-gray);
+    width: 100%;
+}
+
+header, footer{
+    padding: 1em;
+}
+
+main{
+    max-width: 1795px;
+}
+
+/* ----- CONTAINERS ----- */
+section{
+    margin: 1em 0;
+    padding: 1em;
+}
+
+/* ---------- EXTRA SMALL SCREEN STYLES ---------- */
+header, footer{
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+section{
+    background-color: var(--red);
+    color: var(--light-gray);
+}
+
+img{
+    margin: 0.75em 0.75em 0.75em 0;
+    display: inline;
+    float: left;
+}
+
+
+/* ---------- SMALL SCREEN STYLES ---------- */
+/* --------------- BEGIN SMALL SCREEN SIZES --------------- */
+    /* header, footer{
+        background-color: var(--lime-green);
+        color: var(--dark-gray);
+    }
+
+    main{
+        display: grid;
+        grid-gap: 0.75em;
+        grid-template-columns: 1fr 1fr;
+        margin: 1em 0;
+    }
+
+    section{
+        background-color: var(--yellow);
+        color: var(--dark-gray);
+        margin: 0;
+    }
+
+    #one, #two, #seven, #eight{
+        grid-column: 1/3;
+    }
+
+    img{
+        width: 200px;
+        max-width: 200px;
+    } */
+/* --------------- END SMALL SCREEN SIZES --------------- */
+
+
+
+/* ---------- MEDIUM SCREEN STYLES ---------- */
+/* --------------- BEGIN MEDIUM SCREEN SIZES --------------- */
+    /* header, footer{
+        background-color: var(--black);
+        color: var(--white);
+    }   
+
+    main{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    section{
+        background-color: var(--light-gray);
+    }
+
+    #one{
+        grid-column: 1/3;
+    }
+
+    #two{
+        grid-column: 3/4;
+        grid-row: 1/3;
+    }
+
+    #seven{
+        grid-column: 3/4;
+        grid-row: 3/5;
+    } */
+/* --------------- END MEDIUM SCREEN SIZES --------------- */
+
+
+
+/* ---------- LARGE SCREEN STYLES ---------- */
+/* --------------- BEGIN LARGE SCREEN SIZES --------------- */
+    /* header, footer{
+        background-color: var(--lime-green);
+        color: var(--dark-gray);
+    }
+
+    h1, h2{
+        display: inline-block;
+    }
+
+    section{
+        background-color: var(--blue);
+    }
+
+    main{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #one, #seven{
+        grid-column: 1/3;
+    }
+
+    #two{
+        grid-row: 1/2;
+    }
+
+    #two, #eight{
+        grid-column: 3/5;
+    }
+
+    #seven, #eight{
+        grid-row: 3/4;
+    } */
+/* --------------- END LARGE SCREEN SIZES --------------- */
+
+
+
+/* ---------- ADJUSTING RESPONSIVE IMAGE SIZE ---------- */
+/* --------------- BEGIN RESPONSIVE IMAGE ADJUST SIZES --------------- */
+    /* img{
+        width: 300px;
+        max-width: 300px;
+    } */
+/* --------------- END RESPONSIVE IMAGE ADJUST SIZES --------------- */
+
+
+
+/* ---------- EXTRA LARGE SCREEN STYLES ---------- */
+/* --------------- BEGIN EXTRA LARGE SCREEN SIZES --------------- */
+    /* header, footer{
+        background-color: var(--orange);
+        padding-left: 5%;
+    }
+
+    main{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin: 1em auto;
+    }
+
+    section{
+        background-color: var(--blue-gray);
+        color: var(--dark-gray);
+    }
+
+    #one, #two{
+        grid-row: 1/3;
+    }
+
+    #one{
+        grid-column: 1/5;
+    }
+
+    #two{
+        grid-column: 5/9;
+    }
+
+    #three, #four{
+        grid-column: 9/12;
+    }
+
+    #three{
+        grid-row: 1/2;
+    }
+
+    #four{
+        grid-row: 2/3;
+    }
+
+    #five, #six{
+        grid-column: 1/4;
+    }
+
+    #five{
+        grid-row: 3/4;
+    }
+
+    #six{
+        grid-row: 4/5;
+    }
+
+    #seven, #eight{
+        grid-row: 3/5;
+    }
+
+    #seven{
+        grid-column: 4/8;
+    }
+
+    #eight{
+        grid-column: 8/12;
+    }
+
+    #three p, #four p, #five p, #six p{
+        padding-top: 2em;
+    } */
+/* --------------- END EXTRA LARGE SCREEN SIZES --------------- */
