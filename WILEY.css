@@ -201,7 +201,8 @@ img{
 
 /* ---------- SMALL SCREEN STYLES ---------- */
 /* --------------- BEGIN SMALL SCREEN SIZES --------------- */
-    /* header, footer{
+@media (max-width: 767px) {
+    header, footer{
         background-color: var(--lime-green);
         color: var(--dark-gray);
     }
@@ -226,14 +227,16 @@ img{
     img{
         width: 200px;
         max-width: 200px;
-    } */
+    }
+}
 /* --------------- END SMALL SCREEN SIZES --------------- */
 
 
 
 /* ---------- MEDIUM SCREEN STYLES ---------- */
 /* --------------- BEGIN MEDIUM SCREEN SIZES --------------- */
-    /* header, footer{
+@media (min-width: 768px) and (max-width: 1023px) {
+    header, footer{
         background-color: var(--black);
         color: var(--white);
     }   
@@ -258,14 +261,16 @@ img{
     #seven{
         grid-column: 3/4;
         grid-row: 3/5;
-    } */
+    } 
+}
 /* --------------- END MEDIUM SCREEN SIZES --------------- */
 
 
 
 /* ---------- LARGE SCREEN STYLES ---------- */
 /* --------------- BEGIN LARGE SCREEN SIZES --------------- */
-    /* header, footer{
+@media (min-width: 1024px) and (max-width: 1279px) {
+    header, footer{
         background-color: var(--lime-green);
         color: var(--dark-gray);
     }
@@ -296,24 +301,48 @@ img{
 
     #seven, #eight{
         grid-row: 3/4;
-    } */
+    }
+}
 /* --------------- END LARGE SCREEN SIZES --------------- */
 
 
 
 /* ---------- ADJUSTING RESPONSIVE IMAGE SIZE ---------- */
 /* --------------- BEGIN RESPONSIVE IMAGE ADJUST SIZES --------------- */
-    /* img{
+img{
+    width: 300px;
+    max-width: 300px;
+}  
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    img {
+        width: 200px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    img {
+        width: 250px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1280px) {
+    img {
         width: 300px;
-        max-width: 300px;
-    } */
+        max-width: 100%;
+    }
+}
 /* --------------- END RESPONSIVE IMAGE ADJUST SIZES --------------- */
 
 
 
 /* ---------- EXTRA LARGE SCREEN STYLES ---------- */
 /* --------------- BEGIN EXTRA LARGE SCREEN SIZES --------------- */
-    /* header, footer{
+@media (min-width: 1280px) {
+    header, footer{
         background-color: var(--orange);
         padding-left: 5%;
     }
@@ -378,5 +407,6 @@ img{
 
     #three p, #four p, #five p, #six p{
         padding-top: 2em;
-    } */
+    }
+}
 /* --------------- END EXTRA LARGE SCREEN SIZES --------------- */
